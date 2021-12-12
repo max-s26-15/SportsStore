@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Bi/tKGw5Pfv6dYCcTo8MSI86BPynvZ1OAdiSBAcMSLPTxQxuJUIB786aN2a0K2gYsfeVfqdzhbzOvsmDHLHPRw==",
+  "success": true,
+  "projectFilePath": "C:\\Max\\C#\\SportsStore\\SportsStore\\SportsStore.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\пк\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}
