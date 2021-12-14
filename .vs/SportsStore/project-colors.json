@@ -5,7 +5,12 @@
       "ProjectGuid": "a6365cfd-28d0-4170-85db-0df12a01009b",
       "DisplayName": "SportsStore",
       "ColorIndex": 0
+    },
+    "0f242160-a784-4ac6-a8a4-61dabf3f7463": {
+      "ProjectGuid": "0f242160-a784-4ac6-a8a4-61dabf3f7463",
+      "DisplayName": "SportsStore.Test",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }
