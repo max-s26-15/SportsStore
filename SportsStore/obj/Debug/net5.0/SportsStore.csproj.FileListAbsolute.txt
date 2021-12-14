@@ -107,3 +107,6 @@ C:\Max\C#\SportsStore\SportsStore\obj\Debug\net5.0\SportsStore.RazorTargetAssemb
 C:\Max\C#\SportsStore\SportsStore\bin\Debug\net5.0\SportsStore.Views.dll
 C:\Max\C#\SportsStore\SportsStore\bin\Debug\net5.0\SportsStore.Views.pdb
 C:\Max\C#\SportsStore\SportsStore\obj\Debug\net5.0\SportsStore.Views.pdb
+C:\Max\C#\SportsStore\SportsStore\obj\Debug\net5.0\Razor\Views\Product\List.cshtml.g.cs
+C:\Max\C#\SportsStore\SportsStore\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Max\C#\SportsStore\SportsStore\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
