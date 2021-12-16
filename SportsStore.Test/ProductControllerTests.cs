@@ -4,6 +4,7 @@ using System.Linq;
 using Moq;
 using SportsStore.Controllers;
 using SportsStore.Models;
+using SportsStore.Models.ViewModels;
 using Xunit;
 
 namespace SportsStore.Test
@@ -26,11 +27,11 @@ namespace SportsStore.Test
             controller.PageSize = 3;
 
             // Act
-            IEnumerable<Product> rez =
-                controller.List(2).ViewData.Model as IEnumerable<Product>;
+            ProductsListViewModel rez =
+                controller.List(2).ViewData.Model as ProductsListViewModel;
 
             // Assert
-            Product[] prodArray = rez.ToArray();
+            Product[] prodArray = rez.Products.ToArray();
             Assert.True(prodArray.Length == 2);
             Assert.Equal("P4", prodArray[0].Name);
             Assert.Equal("P5", prodArray[1].Name);
