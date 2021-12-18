@@ -11,10 +11,13 @@ namespace SportsStore.Components
         public NavigationMenuViewComponent(IProductRepository repository) => 
             _repository = repository;
 
-        public IViewComponentResult Invoke() => View(_repository.Products
-            .Select(x => x.Category)
-            .Distinct()
-            .OrderBy(x => x)
-        );
+        public IViewComponentResult Invoke()
+        {
+            ViewBag.SelectedCategory = RouteData?.Values["category"];
+            return View(_repository.Products
+                .Select(x => x.Category)
+                .Distinct()
+                .OrderBy(x => x));
+        }
     }
 }
