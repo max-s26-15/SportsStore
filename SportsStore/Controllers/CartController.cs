@@ -1,5 +1,6 @@
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using SportsStore.Infrastructure;
 using SportsStore.Models;
 
 namespace SportsStore.Controllers
