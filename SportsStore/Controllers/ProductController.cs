@@ -12,17 +12,21 @@ namespace SportsStore.Controllers
 
         public ProductController(IProductRepository repository) => _repository = repository;
 
-        public ViewResult List(int productPage = 1)
-            => View(new ProductsListViewModel {
+        public ViewResult List(string category, int productPage = 1)
+            => View(new ProductsListViewModel
+            {
                 Products = _repository.Products
+                    .Where(p => category == null || p.Category == category)
                     .OrderBy(p => p.ProductId)
                     .Skip((productPage - 1) * PageSize)
                     .Take(PageSize),
-                PagingInfo = new PagingInfo {
+                PagingInfo = new PagingInfo
+                {
                     CurrentPage = productPage,
                     ItemsPerPage = PageSize,
                     TotalItems = _repository.Products.Count()
-                }
+                },
+                CurrentCategory = category
             });
     }
 }
