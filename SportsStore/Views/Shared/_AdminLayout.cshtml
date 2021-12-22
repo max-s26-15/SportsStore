@@ -4,6 +4,9 @@
     <meta name="viewport" content="width=device-width"/>
     <title>@ViewBag.Title</title>
     <link rel="stylesheet" type="text/css" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <style>
+        .input-validation-error{border-color:  red; background-color: #FEE;}
+    </style>
 </head>
 <body class="m-1 p-1">
 <div class="bg-info p-2">
@@ -13,6 +16,6 @@
 {
     <div class="alert alert-success">@TempData["message"]</div>
 }
-    @RenderBody();
+    @RenderBody()
 </body>
 </html>
