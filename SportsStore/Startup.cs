@@ -49,7 +49,6 @@ namespace SportsStore
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseRouting();
             app.UseDefaultFiles();
             app.UseStaticFiles();
             app.UseFileServer(new FileServerOptions()
@@ -61,8 +60,10 @@ namespace SportsStore
             });
             app.UseSession();
             app.UseStatusCodePages();
-            app.UseAuthentication();
             
+            app.UseRouting();
+            app.UseAuthentication();
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
