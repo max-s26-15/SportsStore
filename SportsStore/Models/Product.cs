@@ -19,5 +19,9 @@ namespace SportsStore.Models
         
         [Required(ErrorMessage = "Please specify a category")]
         public string Category { get; set; }
+        
+        [Required]
+        [DataType(DataType.Url)]
+        public string ImageUrl { get; set; }
     }
 }
