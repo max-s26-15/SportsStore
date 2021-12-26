@@ -14,7 +14,7 @@ namespace SportsStore.Models
         
         [Required]
         [Range(0.01, double.MaxValue, ErrorMessage = "Please enter a positive price")]
-        public decimal Price { get; set; }
+        public double Price { get; set; }
         
         [Required(ErrorMessage = "Please specify a category")]
         public string Category { get; set; }

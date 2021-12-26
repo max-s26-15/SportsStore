@@ -79,8 +79,8 @@ namespace SportsStore.Test
         public void Calculate_Cart_Total()
         {
             // Arrange - create some test products
-            Product p1 = new Product { ProductId = 1, Name = "P1", Price = 100M};
-            Product p2 = new Product { ProductId = 2, Name = "P2", Price = 50M};
+            Product p1 = new Product { ProductId = 1, Name = "P1", Price = 100};
+            Product p2 = new Product { ProductId = 2, Name = "P2", Price = 50};
             
             // Arrange - create a new cart
             Cart target = new Cart();
@@ -89,18 +89,18 @@ namespace SportsStore.Test
             target.AddItem(p1, 1);
             target.AddItem(p2, 3);
             target.AddItem(p1, 1);
-            decimal rez = target.ComputeTotalValue();
+            double rez = target.ComputeTotalValue();
             
             // Assert
-            Assert.Equal(350M, rez);
+            Assert.Equal(350, rez);
         }
 
         [Fact]
         public void Can_Clear_Contents()
         {
             // Arrange - create some test products
-            Product p1 = new Product { ProductId = 1, Name = "P1", Price = 100M};
-            Product p2 = new Product { ProductId = 2, Name = "P2", Price = 50M};
+            Product p1 = new Product { ProductId = 1, Name = "P1", Price = 100};
+            Product p2 = new Product { ProductId = 2, Name = "P2", Price = 50};
             
             // Arrange - create a new cart
             Cart target = new Cart();
