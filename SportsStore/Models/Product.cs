@@ -14,6 +14,7 @@ namespace SportsStore.Models
         
         [Required]
         [Range(0.01, double.MaxValue, ErrorMessage = "Please enter a positive price")]
+        [DataType(DataType.Currency, ErrorMessage = "Please enter a valid value")]
         public double Price { get; set; }
         
         [Required(ErrorMessage = "Please specify a category")]
