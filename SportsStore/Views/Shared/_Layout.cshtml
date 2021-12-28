@@ -1,28 +1,50 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="shortcut icon" href="~/images/icon.png" type="image/png"/>
     <title>SportsStore</title>
     <meta name="viewport" content="width=device-width"/>
     <link rel="stylesheet" type="text/css" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="/node_modules/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="~/css/products.css"/>
 </head>
 <body>
-    <div class="navbar navbar-inverse bg-inverse" role="navigation">
-        <div class="row">
-            <a class="col navbar-brand" href="#">SPORTS STORE</a>
-            <div class="col-4 text-right" style="display: flex; justify-content: flex-end; align-items: center;">
-                @await  Component.InvokeAsync("CartSummary")
-            </div>
-        </div>
+    <div class="wrap">
+        <header class="navbar bg-inverse">
+                <div class="row">
+                    <a class="col navbar-inverse navbar-brand" href="/">
+                        <img src="~/images/logo.png" alt="Logo" class="logo"/>SPORTS STORE
+                    </a>
+                    <div class="col-4 text-right" style="display: flex; justify-content: flex-end; align-items: center;">
+                        @await Component.InvokeAsync("CartSummary")
+                    </div>
+                </div>
+            </header>
+            <section class="section">
+                <nav id="categories" class="navbar bg-inverse">
+                    @await Component.InvokeAsync("NavigationMenu")
+                </nav>
+                <main class="products">
+                    @RenderBody()
+                    <footer class="footer navbar bg-inverse">
+                            <div class="footer-text">
+                                <p>©&nbsp;Internet-shop «Sports Store™»</p>
+                                <p>Training project 2021 - @DateTime.Now.Year</p>
+                            </div>
+                            <div class="footer-img">
+                                <img src="~/images/mastercard-logo.svg" alt="Mastercard"/>
+                                <img src="~/images/visa-logo.svg" alt="Visa"/>
+                            </div>
+                            <a class="btn btn-outline-secondary"
+                                    asp-action="Index"
+                                    asp-controller="Admin"
+                                >Admin page</a>
+                        </footer>
+                </main>
+            </section>
     </div>
-    <div class="row m-1 p-1">
-        <div id="categories" class="col-3">
-            @await Component.InvokeAsync("NavigationMenu")
-        </div>
-        <div class="col-9">
-            @RenderBody()
-        </div>
-    </div>
+    
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

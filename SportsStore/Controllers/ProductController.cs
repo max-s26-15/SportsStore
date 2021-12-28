@@ -8,7 +8,7 @@ namespace SportsStore.Controllers
     public class ProductController : Controller
     {
         private IProductRepository _repository;
-        public int PageSize = 4;
+        public int PageSize = 12;
 
         public ProductController(IProductRepository repository) => _repository = repository;
 

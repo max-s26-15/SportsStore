@@ -18,6 +18,7 @@ namespace SportsStore.Models
         public double Price { get; set; }
         
         [Required(ErrorMessage = "Please specify a category")]
+        [StringLength(20)]
         public string Category { get; set; }
         
         [Required]
