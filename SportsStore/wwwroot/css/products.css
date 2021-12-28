@@ -6,7 +6,7 @@ div.wrap {
 }
 
 header.navbar {
-    height: 14vh;
+    height: 12vh;
 }
 
 header.navbar > .row {
@@ -38,7 +38,7 @@ img.logo {
 
 .section {
     width: 100%;
-    min-height: 86vh;
+    min-height: 88vh;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -70,6 +70,14 @@ main.products {
     justify-content: space-between;
 }
 
+main.products > * {
+    padding: 15px;
+}
+
+main.products > * > h2, main.products > * > p {
+    text-align: center;
+}
+
 div.products {
     display: flex;
     flex-direction: column;
@@ -82,12 +90,18 @@ div.products-container {
     justify-content: center;
 }
 
-.myCart {
-    padding: 15px;
+div.completed {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.myCart h2 {
-    text-align: center;
+div.completed > img {
+    display: block;
+    width: 400px;
 }
 
 footer.footer {
