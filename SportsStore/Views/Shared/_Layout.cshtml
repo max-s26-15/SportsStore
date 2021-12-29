@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width"/>
     <link rel="stylesheet" type="text/css" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="/node_modules/font-awesome/css/font-awesome.min.css"/>
-    <link rel="stylesheet" type="text/css" href="~/css/products.css"/>
+    <link rel="stylesheet" type="text/css" href="~/css/_Layout.css"/>
 </head>
 <body>
     <div class="wrap">
@@ -35,10 +35,14 @@
                                 <img src="~/images/mastercard-logo.svg" alt="Mastercard"/>
                                 <img src="~/images/visa-logo.svg" alt="Visa"/>
                             </div>
-                            <a class="btn btn-outline-secondary"
-                                    asp-action="Index"
-                                    asp-controller="Admin"
+                            <div>
+                                <a class="btn btn-outline-secondary"
+                                   asp-action="Index"
+                                   asp-controller="Admin"
                                 >Admin page</a>
+                                <a class="btn btn-outline-secondary"
+                                   asp-action="List" asp-controller="Order">Orders</a>
+                            </div>
                         </footer>
                 </main>
             </section>

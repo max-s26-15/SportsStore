@@ -4,24 +4,26 @@
     <meta name="viewport" content="width=device-width"/>
     <title>@ViewBag.Title</title>
     <link rel="stylesheet" type="text/css" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
-    <style>
-        .input-validation-error{border-color:  red; background-color: #FEE;}
-    </style>
+    <link rel="stylesheet" type="text/css" href="~/css/_AdminLayout.css"/>
 </head>
-<body style="overflow-x: hidden">
-<div class="bg-info p-2 row">
+<body>
+<header class="row">
     <div class="col">
         <h4>@ViewBag.Title</h4>
     </div>
     <div class="col-2">
-        <a class="btn btn-sm btn-primary" asp-action="Logout"
+        <a class="btn btn-outline-secondary" asp-action="Logout"
            asp-controller="Account">Log Out</a>
+        <a class="btn btn-outline-secondary"
+           asp-action="List" asp-controller="Product">Home page</a>
     </div>
-</div>
-@if (TempData["message"] != null)
-{
-    <div class="alert alert-success">@TempData["message"]</div>
-}
+</header>
+<div class="wrap">
+    @if (TempData["message"] != null)
+    {
+        <div class="alert alert-success">@TempData["message"]</div>
+    }
     @RenderBody()
+</div>
 </body>
 </html>

@@ -121,3 +121,7 @@ footer img {
 footer a.btn-outline-secondary:hover {
     color: var(--bg-color);
 }
+
+a.btn-outline-secondary:focus{
+    color: var(--bg-color);
+}

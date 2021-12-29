@@ -3,52 +3,27 @@
     ViewBag.Title = "Log In";
     Layout = "_AdminLayout";
 }
-<style>
-    .main{
-         width: 17.5%;
-         height: 80vh;
-         margin: 0 auto;
-         display: flex;
-         flex-direction: column-reverse;
-         justify-content: center;
-    }
-    
-    ._form{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    
-    ul{
-        margin: 0;
-        padding: 20px 0;
-    }
-    
-    li{
-        list-style: none;
-    }
-    
-    label{
-        color: #292b2c;
-    }
-    
-    button{
-        cursor: pointer;
-    }
-</style>
-<div class="main text-danger" asp-validation-summary="All">
-    <form class="_form" asp-action="Login" asp-controller="Account" method="post">
-        <input type="hidden" asp-for="ReturnUrl"/>
-        <div class="form-group">
-            <label asp-for="Name"></label>
-            <div><span asp-validation-for="Name"  class="text-danger"></span></div>
-            <input asp-for="Name" class="form-control"/>
-        </div>
-        <div class="form-group">
-            <label asp-for="Password"></label>
-            <div><span asp-validation-for="Password" class="text-danger"></span></div>
-            <input asp-for="Password" class="form-control"/>
-        </div>
-        <button class="btn btn-primary" type="submit">Log In</button>
-    </form>
-</div>
+
+<main>
+    <h2 class="logo">
+        <a href="/" class="logo-link">
+            <img src="~/images/logo.png" alt="Logo" class="logo-img"/>SPORTS STORE
+        </a>
+    </h2>
+    <div class="main text-danger" asp-validation-summary="All">
+        <form class="_form" asp-action="Login" asp-controller="Account" method="post">
+            <input type="hidden" asp-for="ReturnUrl"/>
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <div><span asp-validation-for="Name" class="text-danger"></span></div>
+                <input asp-for="Name" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <div><span asp-validation-for="Password" class="text-danger"></span></div>
+                <input asp-for="Password" class="form-control"/>
+            </div>
+            <button class="btn btn-success" type="submit">Log In</button>
+        </form>
+    </div>
+</main>

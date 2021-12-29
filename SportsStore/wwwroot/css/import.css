@@ -1,5 +1,9 @@
 :root {
-  --font-color: #ccc;
-  --bg-color: rgb(22, 23, 23);
-  --bg-color-alpha: rgba(22, 23, 23, 0.5);
+    --font-color: #ccc;
+    --bg-color: rgb(22, 23, 23);
+    --bg-color-alpha: rgba(22, 23, 23, 0.5);
+}
+
+button {
+    cursor: pointer;
 }

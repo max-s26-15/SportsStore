@@ -1,0 +1,43 @@
+main {
+    width: 17.5%;
+    height: 80vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main {
+    display: inherit;
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+
+._form {
+    display: inherit;
+    flex-direction: column;
+    justify-content: center;
+}
+
+ul {
+    margin: 0;
+    padding: 20px 0;
+}
+
+li {
+    list-style: none;
+}
+
+label {
+    color: var(--bg-color);
+}
+
+.logo > .logo-link {
+    text-decoration: none;
+    color: var(--bg-color-alpha);
+}
+
+
+.logo .logo-img {
+    width: 40px;
+}

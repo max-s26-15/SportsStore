@@ -1,0 +1,35 @@
+@import "import.css";
+@import "AccountLogin.css";
+
+body {
+    overflow-x: hidden;
+}
+
+.input-validation-error {
+    border-color: red;
+    background-color: #FEE;
+}
+
+header.row {
+    display: flex;
+    align-items: center;
+    height: 12vh;
+    padding: 20px;
+    background: var(--bg-color);
+    color: var(--font-color);
+}
+
+a.btn-outline-secondary:hover {
+    color: var(--bg-color);
+}
+
+div.wrap {
+    margin: 0;
+    padding: 15px;
+}
+
+div.edit-form{
+    width: 60%;
+    height: inherit;
+    margin: 40px auto;
+}
