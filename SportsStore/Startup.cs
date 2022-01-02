@@ -47,17 +47,15 @@ namespace SportsStore
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseStatusCodePages();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Error");
             }
 
             app.UseDefaultFiles();
             app.UseStaticFiles();
-            app.UseFileServer(new FileServerOptions()
-            {
-                FileProvider = new PhysicalFileProvider(
-                    Path.Combine(Directory.GetCurrentDirectory(), @"node_modules")), 
-                RequestPath = new PathString("/node_modules"),
-                EnableDirectoryBrowsing = true
-            });
             app.UseSession();
             app.UseStatusCodePages();
             
@@ -102,8 +100,8 @@ namespace SportsStore
                     pattern: "{controller}/{action}/{id?}"
                 );
             });
-            SeedData.EnsurePopulated(app);
-            IdentitySeedData.EnsurePopulated(app);
+            //SeedData.EnsurePopulated(app);
+            //IdentitySeedData.EnsurePopulated(app);
         }
     }
 }

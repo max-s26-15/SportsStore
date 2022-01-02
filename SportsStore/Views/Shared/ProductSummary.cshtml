@@ -7,7 +7,7 @@
         <p class="card-text">@Model.Description</p>
         <div style="display: flex; justify-content: space-between">
             <div class="badge badge-pill badge-primary" style="display: flex; justify-content: center; align-items: center">
-                <span>@Model.Price.ToString("c")</span>
+                <span>@Model.Price$</span>
             </div>
             <form id="@Model.ProductId" asp-action="AddToCart"
                       asp-controller="Cart" method="post">
