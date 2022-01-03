@@ -25,7 +25,7 @@
             <tr>
                 <td class="text-right">@item.ProductId</td>
                 <td>@item.Name</td>
-                <td class="text-right">@item.Price.ToString("c")</td>
+                <td class="text-right">@item.Price.ToString("0.00")$</td>
                 <td class="text-center">
                     <form asp-action="Delete" method="post">
                         <a asp-action="Edit" class="btn btn-sm btn-warning"
