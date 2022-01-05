@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "ignored": "true",
+      "suggestion": "true",
+      "type": "secrets",
+      "connectionId": ""
+    },
+    "mssql2": {
+      "type": "mssql",
+      "connectionId": "Data:SportStoreIdentity:ConnectionString"
+    },
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "Data:SportStoreProducts:ConnectionString"
+    }
+  }
+}
