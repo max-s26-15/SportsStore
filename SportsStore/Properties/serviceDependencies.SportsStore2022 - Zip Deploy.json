@@ -2,11 +2,13 @@
   "dependencies": {
     "mssql2": {
       "secretStore": "AzureAppSettings",
+      "resourceId": null,
       "type": "mssql.onprem",
       "connectionId": "Data:SportStoreIdentity:ConnectionString"
     },
     "mssql1": {
       "secretStore": "AzureAppSettings",
+      "resourceId": null,
       "type": "mssql.onprem",
       "connectionId": "Data:SportStoreProducts:ConnectionString"
     }
